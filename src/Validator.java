@@ -28,7 +28,7 @@ public class Validator {
 
     public static void validatePassword(String password, String confirmPassword) throws WrongPasswordException {
         if (!PASSWORD_PATTERN.matcher(password).matches()) {
-                throw new WrongPasswordException("Пароль неверный, проверьте точность ввода данных");
+            throw new WrongPasswordException("Пароль неверный, проверьте точность ввода данных");
         }
         if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException("Пароли не совпадают, проверьте точность ввода данных");
